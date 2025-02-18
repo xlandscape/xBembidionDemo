@@ -157,7 +157,7 @@ class Bembidion(base.Component):
         # Start simulation
         self.default_observer.write_message(5, f"Simulation started.")
         for day in range(self.SimulationDays):
-            logging.info("Day %d: Population count: %d", day + 1, self.get_population_count())
+            #logging.info("Day %d: Population count: %d", day + 1, self.get_population_count())
             self.simulate_day(lulc_vec_for_dll, density_vec_for_dll, exposure_vec_for_dll, temperature)
 
     def initialize(self, lulc_rows, lulc_cols):
@@ -454,7 +454,7 @@ class Bembidion(base.Component):
         for bembid in self.Bembidions[:]:
             plt.plot(bembid.x_trace, bembid.y_trace, color='red', linewidth=2, label='Walking Route')
         
-        plt.savefig('D:/_Git_/24019_BAY_Bembidion/Test/bembid/analysis/output_plot.png')
+        #plt.savefig('D:/_Git_/24019_BAY_Bembidion/Test/bembid/analysis/output_plot.png')
         
         self.default_observer.write_message(5, f"Output plot created.")
         
