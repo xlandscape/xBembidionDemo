@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Batch File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/model/core/init.py",
+            "console": "integratedTerminal",
+            "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/model/core/bin/python-3.9.7-amd64"
+            },
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

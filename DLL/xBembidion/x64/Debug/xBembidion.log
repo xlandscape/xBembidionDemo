@@ -1,0 +1,152 @@
+﻿  xBembidion.cpp
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(79,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(79,42): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(102,14): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(102,14): warning C4244:         with
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(102,14): warning C4244:         [
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(102,14): warning C4244:             _Ty=double
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(102,14): warning C4244:         ]
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(199,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(199,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(451,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(451,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(456,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(456,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(486,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(486,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(511,26): warning C4018: '>=': signed/unsigned mismatch
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(511,49): warning C4018: '>=': signed/unsigned mismatch
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(537,53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(539,30): warning C4018: '<': signed/unsigned mismatch
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(580,77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(580,74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\vector_indexing_suite.hpp(176,51): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+  (compiling source file 'xBembidion.cpp')
+  D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\vector_indexing_suite.hpp(176,51):
+  the template instantiation context (the oldest one first) is
+  	D:\_Git_\24019_BAY_Bembidion\xBembidion\xBembidion.cpp(646,50):
+  	see reference to class template instantiation 'boost::python::vector_indexing_suite<std::vector<double,std::allocator<double>>,false,boost::python::detail::final_vector_derived_policies<Container,false>>' being compiled
+          with
+          [
+              Container=std::vector<double,std::allocator<double>>
+          ]
+  	D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\vector_indexing_suite.hpp(169,9):
+  	while compiling class template member function 'unsigned __int64 boost::python::vector_indexing_suite<std::vector<double,std::allocator<double>>,false,boost::python::detail::final_vector_derived_policies<Container,false>>::convert_index(Container &,PyObject *)'
+          with
+          [
+              Container=std::vector<double,std::allocator<double>>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(261,25):
+  		see the first reference to 'boost::python::vector_indexing_suite<std::vector<double,std::allocator<double>>,false,boost::python::detail::final_vector_derived_policies<Container,false>>::convert_index' in 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,double,unsigned __int64,double>::base_delete_item'
+          with
+          [
+              Container=std::vector<double,std::allocator<double>>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(186,21):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,double,unsigned __int64,double>::base_delete_item' in 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,double,unsigned __int64,double>::visit'
+          with
+          [
+              Container=std::vector<double,std::allocator<double>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<double,std::allocator<double>>,false>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\def_visitor.hpp(31,34):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,double,unsigned __int64,double>::visit' in 'boost::python::def_visitor_access::visit'
+          with
+          [
+              Container=std::vector<double,std::allocator<double>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<double,std::allocator<double>>,false>
+          ]
+  
+D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\detail\indexing_suite_detail.hpp(605,29): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+  (compiling source file 'xBembidion.cpp')
+  D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\detail\indexing_suite_detail.hpp(605,29):
+  the template instantiation context (the oldest one first) is
+  	D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\vector_indexing_suite.hpp(49,18):
+  	see reference to class template instantiation 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>' being compiled
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  	D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(252,9):
+  	while compiling class template member function 'void boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::base_delete_item(Container &,PyObject *)'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(186,21):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::base_delete_item' in 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::visit'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\def_visitor.hpp(31,34):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::visit' in 'boost::python::def_visitor_access::visit'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  	D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(256,32):
+  	see reference to class template instantiation 'boost::python::detail::slice_helper<Container,DerivedPolicies,boost::python::detail::no_proxy_helper<Container,DerivedPolicies,boost::python::detail::container_element<Container,Index,DerivedPolicies>,Index>,Data,Index>' being compiled
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>,
+              Index=unsigned __int64,
+              Data=int
+          ]
+  	D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\detail\indexing_suite_detail.hpp(588,9):
+  	while compiling class template member function 'void boost::python::detail::slice_helper<Container,DerivedPolicies,boost::python::detail::no_proxy_helper<Container,DerivedPolicies,boost::python::detail::container_element<Container,Index,DerivedPolicies>,Index>,Data,Index>::base_get_slice_data(Container &,PySliceObject *,Index &,Index &)'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>,
+              Index=unsigned __int64,
+              Data=int
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\detail\indexing_suite_detail.hpp(695,32):
+  		see the first reference to 'boost::python::detail::slice_helper<Container,DerivedPolicies,boost::python::detail::no_proxy_helper<Container,DerivedPolicies,boost::python::detail::container_element<Container,Index,DerivedPolicies>,Index>,Data,Index>::base_get_slice_data' in 'boost::python::detail::slice_helper<Container,DerivedPolicies,boost::python::detail::no_proxy_helper<Container,DerivedPolicies,boost::python::detail::container_element<Container,Index,DerivedPolicies>,Index>,Data,Index>::base_delete_slice'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>,
+              Index=unsigned __int64,
+              Data=int
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(256,49):
+  		see the first reference to 'boost::python::detail::slice_helper<Container,DerivedPolicies,boost::python::detail::no_proxy_helper<Container,DerivedPolicies,boost::python::detail::container_element<Container,Index,DerivedPolicies>,Index>,Data,Index>::base_delete_slice' in 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::base_delete_item'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>,
+              Index=unsigned __int64,
+              Data=int
+          ]
+          and
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\indexing_suite.hpp(186,21):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::base_delete_item' in 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::visit'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  		D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\def_visitor.hpp(31,34):
+  		see the first reference to 'boost::python::indexing_suite<Container,DerivedPolicies,false,false,int,unsigned __int64,int>::visit' in 'boost::python::def_visitor_access::visit'
+          with
+          [
+              Container=std::vector<int,std::allocator<int>>,
+              DerivedPolicies=boost::python::detail::final_vector_derived_policies<std::vector<int,std::allocator<int>>,false>
+          ]
+  
+D:\_Git_\24019_BAY_Bembidion\resources\boost_1_86_0\boost\python\suite\indexing\detail\indexing_suite_detail.hpp(619,27): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+  (compiling source file 'xBembidion.cpp')
+  
+     Creating library D:\_Git_\24019_BAY_Bembidion\xBembidion\x64\Debug\xBembidion.lib and object D:\_Git_\24019_BAY_Bembidion\xBembidion\x64\Debug\xBembidion.exp
+  xBembidion.vcxproj -> D:\_Git_\24019_BAY_Bembidion\xBembidion\x64\Debug\xBembidion.pyd
