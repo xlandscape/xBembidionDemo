@@ -1,0 +1,65 @@
+INFO  Startup initialization
+INFO  Parameters: D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\template.xrun
+INFO  Project: scenario/Demo-scenario
+INFO  Project directory: D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main
+INFO  Runtime directory: D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\base
+INFO  Working directory: D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\run
+WARN  Model has no metadata file
+NOTE  Model has no latest-versions file
+WARN  Model is not git-versioned
+NOTE  Model has no repository metadata
+WARN  Model is not public, consider internal use only
+WARN  Model is released under an unknown or non-free license
+      Restrictions to usage and distribution may apply, check application for your use-case
+WARN  Model is a pre-release version
+      Consider it experimental and report errors
+NOTE  Limited code-style conformance of Model
+WARN  Model has no changelog
+NOTE  Readme of Model has no YAML header
+WARN  Model has no contributing note
+NOTE  No latest version information on Model
+NOTE  No issue tracking for Model
+INFO  Model uses Landscape Model core version 1.17
+NOTE  Landscape Model core does not follow git-flow
+NOTE  Limited code-style conformance of Landscape Model core
+NOTE  Changelog of Landscape Model core has no YAML header
+NOTE  Readme of Landscape Model core has no YAML header
+NOTE  Contributing of Landscape Model core has no YAML header
+NOTE  No latest version information on Landscape Model core
+NOTE  Default branch of Landscape Model core is not main
+INFO  Landscape Model core uses Python version 3.9.7
+NOTE  Python is not git-versioned
+NOTE  No latest version information on Python
+INFO  Model uses scenario DemoScenario version 1.1
+WARN  Usage of scenario DemoScenario in Model is not officially supported. Please proceed with care.
+WARN  DemoScenario is not git-versioned
+NOTE  DemoScenario has no repository metadata
+WARN  DemoScenario is not public, consider internal use only
+WARN  DemoScenario is released under an unknown or non-free license
+      Restrictions to usage and distribution may apply, check application for your use-case
+NOTE  Limited code-style conformance of DemoScenario
+WARN  DemoScenario has no changelog
+WARN  DemoScenario has no readme
+WARN  DemoScenario has no contributing note
+NOTE  No latest version information on DemoScenario
+NOTE  No issue tracking for DemoScenario
+NOTE  Modules of the scenario are currently not checked
+INFO  Experiment started
+INFO  Serial mode, 1 MC(s)
+Traceback (most recent call last):
+  File "D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\base\MCRun.py", line 66, in __init__
+    component = getattr(component_module, componentConfig.attrib["class"])(
+AttributeError: module 'CropProtection' has no attribute 'xCropProtection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\init.py", line 81, in <module>
+    run(arg)
+  File "D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\init.py", line 31, in run
+    experiment.run()
+  File "D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\base\Experiment.py", line 169, in run
+    base.MCRun(mcConfig).run()
+  File "D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\model\core\base\MCRun.py", line 69, in __init__
+    raise AttributeError(
+AttributeError: Module 'CropProtection' does not contain a component 'xCropProtection'

@@ -1,0 +1,6 @@
+OK    Creating new X3dfStore at
+      D:\_Git_\24019-BAY Bembidion\resources\xCropProtectionDemo-main\run\Rummen-scenario\mcs\X37EFAACTX40GHBCQ4\store
+INFO  Initializing component LandscapeScenario
+NOTE  The LandscapeScenario component does currently not document its generic outputs
+      Documentation will be added in a future version
+INFO  Initializing component xCropProtection

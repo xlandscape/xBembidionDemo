@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<info>
+  <start_date>2024-12-20</start_date>
+  <computer>PC6700K2</computer>
+  <versions>
+    <core>1.17</core>
+    <parts />
+    <scenario name="DemoScenario">1.1</scenario>
+  </versions>
+</info>

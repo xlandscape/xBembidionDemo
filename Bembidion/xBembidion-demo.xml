@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xBembidion
+    xmlns="urn:xBembidionLandscapeScenarioGeoPackage" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="urn:xCropProtectionLandscapeScenarioParametrization ../model/core/components/xCropProtection/xCropProtection.xsd"
+>
+    <!-- 
+	<PPMCalendars> 	
+        <PPMCalendar include="PPMCalendars/Demo-calendars/PPMCalendar-222.xml"/>
+        <PPMCalendar include="PPMCalendars/Demo-calendars/PPMCalendar-444.xml"/>
+    </PPMCalendars>
+    <Technologies include="Technologies.xml"/>
+	-->
+</xBembidion>
