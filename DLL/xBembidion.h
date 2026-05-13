@@ -1,5 +1,26 @@
 //#pragma once
 
+/*
+ * xBembidion.h
+ *
+ * ATTRIBUTION NOTICE
+ * The biological model logic, parameter values, and algorithmic structure in
+ * this file are derived from the ALMaSS Carabid B model:
+ *
+ *   Author : Chris J. Topping
+ *   Institution : National Environmental Research Institute, Aarhus University
+ *   Reference : Topping, C.J. (2009). ALMaSS Bembidion model documentation.
+ *               National Environmental Research Institute, Aarhus University.
+ *               https://projects.au.dk/fileadmin/dmu.dk/en/animalsplants/almass/
+ *               ALMaSS/Carabid_B/index.html
+ *   Also cite : Topping, C.J., Hansen, T.S., Jensen, T.S., Jepsen, J.U.,
+ *               Nikolajsen, F., Odderskær, P. (2003). ALMaSS, an agent-based
+ *               model for animals in temperate European landscapes.
+ *               Ecological Modelling, 167(1-2), 65-82.
+ *
+ * xBembidionDemo is released under CC0 1.0 Universal. See LICENSE.txt.
+ */
+
 #include <windows.h>
 #include <vector>
 #include <string>
