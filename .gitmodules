@@ -1,3 +1,6 @@
 [submodule "model/core"]
 	path = model/core
 	url = https://github.com/xlandscape/LandscapeModel-Core
+[submodule "scenario/NRW2"]
+	path = scenario/NRW2
+	url = https://github.com/xlandscape/Scenario-NRW2
