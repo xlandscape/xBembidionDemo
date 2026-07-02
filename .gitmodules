@@ -1,6 +1,3 @@
 [submodule "model/core"]
 	path = model/core
 	url = https://github.com/xlandscape/LandscapeModel-Core
-[submodule "NRW2"]
-	path = NRW2
-	url = A:\\Xplicit\\dev\\xBembidionDemo\\scenario\\NRW2
