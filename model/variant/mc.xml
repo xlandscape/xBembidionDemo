@@ -22,28 +22,28 @@
       <BaseLandscapeGeometries scales="global">$(:LandscapeScenario)</BaseLandscapeGeometries>
       <GeoPackageNamespace scales="global">urn:xBembidionLandscapeScenarioGeoPackage</GeoPackageNamespace>
     </LandscapeScenario>
-	<Weather module="components" class="MarsWeather">
-	  <FilePath scales="global">$(:Temperature)</FilePath>
-	</Weather>
+    <Weather module="components" class="MarsWeather">
+      <FilePath scales="global">$(:Temperature)</FilePath>
+    </Weather>
     <xBembidion module="Bembidion" class="Bembidion"> <!-- module: folder name -->
       <SimulationStart type="date" scales="global">$(SimulationStart)</SimulationStart>
-	  <SimulationEnd type="date" scales="global">$(SimulationEnd)</SimulationEnd>
-	  <Fields>
+      <SimulationEnd type="date" scales="global">$(SimulationEnd)</SimulationEnd>
+      <Fields>
         <FromOutput component="LandscapeScenario" output="FeatureIds"/>
       </Fields>
-	  <FieldGeometries>
+      <FieldGeometries>
         <FromOutput component="LandscapeScenario" output="Geometries"/>
       </FieldGeometries>
-	  <GeometryCrs>
+      <GeometryCrs>
         <FromOutput component="LandscapeScenario" output="Crs"/>
       </GeometryCrs>
-	  <Extent>
+      <Extent>
         <FromOutput component="LandscapeScenario" output="Extent"/>
       </Extent>
-	  <LandUseLandCoverTypes>
+      <LandUseLandCoverTypes>
         <FromOutput component="LandscapeScenario" output="FeatureTypeIds"/>
       </LandUseLandCoverTypes>
-	  <AirTemperature>
+      <AirTemperature>
         <FromOutput component="Weather" output="TEMPERATURE_AVG"/>
       </AirTemperature>
     </xBembidion>

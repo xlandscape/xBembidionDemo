@@ -17,7 +17,8 @@ import logging
 logging.basicConfig(
     filename="simulation_log.txt",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    # format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(created)s;%(message)s"
 )
 
 class Bembidion(base.Component):
@@ -171,10 +172,11 @@ class Bembidion(base.Component):
         """
         
         # Initialize global variables
-        self.InitialNumberOfIndividuals = 100
-        self.SimulationDays = 365
+        self.InitialNumberOfIndividuals = 1000
+        self.SimulationDays = 500
         self.RandomWalkTarget = 0
         self.JulianDay = 0
+        self.Year = 1
         self.Bembidions = []
         self.BembidionCount = []
         
@@ -198,11 +200,11 @@ class Bembidion(base.Component):
             bembid = TBembidion(x, y, self.LandscapeWidth, self.LandscapeHeight, 5)  # stADULT = 5
             bembid.SetBodyBurdenThreshold(pesticide_threshold_vec_for_dll)
             bembid.x_trace = []
-            bembid.x_trace.append(x)
+            # bembid.x_trace.append(x)
             bembid.y_trace = []
-            bembid.y_trace.append(y)
+            # bembid.y_trace.append(y)
             self.Bembidions.append(bembid)
-        logging.info("Initialized with %d individuals.", len(self.Bembidions))
+        # logging.info("Initialized with %d individuals.", len(self.Bembidions))
 
     def add_eggs(self, x, y, number_eggs, raster_vec, exposure_vec, temperature):
         """
@@ -231,11 +233,11 @@ class Bembidion(base.Component):
             bembid.UpdateTemperature(float(temperature.values[self.JulianDay - 1]))
             bembid.UpdateDegreeDays()
             bembid.x_trace = []
-            bembid.x_trace.append(x)
+            # bembid.x_trace.append(x)
             bembid.y_trace = []
-            bembid.y_trace.append(y)
+            # bembid.y_trace.append(y)
             self.Bembidions.append(bembid)
-        logging.info("Added %d eggs at location (%d, %d).", number_eggs, x, y)
+        # logging.info("Added %d eggs at location (%d, %d).", number_eggs, x, y)
 
     def habitat_accessible(self, x, y):
         """
@@ -264,7 +266,8 @@ class Bembidion(base.Component):
         self.JulianDay += 1
         if self.JulianDay > 365:
             self.JulianDay = 1
-        print(f"Day: {self.JulianDay} - {len(self.Bembidions)} individuals")
+            self.Year += 1
+        print(f"Year: {self.Year}, Day: {self.JulianDay} - {len(self.Bembidions)} individuals")
         dead_count = 0
                 
         for bembid in self.Bembidions[:]:
@@ -291,15 +294,15 @@ class Bembidion(base.Component):
             # Movement
             #print(f"1 Position X: {bembid.X}, Position Y: {bembid.Y}")
             bembid.Move(14, True)   # 14 is the maximum distance in meter per day (defined in ALMaSS), True is for dispersing
-                                    # True has to be replaced lateron (in C++ code to not always disperse)
-            bembid.x_trace.append(bembid.X)
-            bembid.y_trace.append(bembid.Y)
+                                    # True has to be replaced later on (in C++ code to not always disperse)
+            # bembid.x_trace.append(bembid.X)
+            # bembid.y_trace.append(bembid.Y)
             #print(f"2 Position X: {bembid.X}, Position Y: {bembid.Y}")
         
         # population size at end of the day
         self.BembidionCount.append(len(self.Bembidions))
         
-        logging.info("Day %d complete. Population: %d, Deaths: %d", self.JulianDay, self.get_population_count(), dead_count)
+        logging.info("%d;%d;%d;%d", self.Year, self.JulianDay, self.get_population_count(), dead_count)
 
     def get_population_count(self):
         """
@@ -407,6 +410,7 @@ class Bembidion(base.Component):
         #----------- GET GLOBAL VARIABLES ----------#
         # read spatial information
         lulc_band = self.get_spatial_LULC()
+        lulc_band = np.full((10000, 10000), 10, dtype=np.int64)
         # Get the shape of the LULC band (number rows and cols)
         lulc_rows, lulc_cols = lulc_band.shape
         # flatten raster data band
@@ -418,9 +422,9 @@ class Bembidion(base.Component):
         
         # constuct pesticide raster object
         exposure_vec = np.array(lulc_vec) # use LULC values as a basis
-        death_zone = int(len(exposure_vec) * 0.2)    # define death zone (a stripe at the top)
-        exposure_vec[:death_zone] = 1
-        exposure_vec[death_zone:] = 0
+        # death_zone = int(len(exposure_vec) * 0.2)    # define death zone (a stripe at the top)
+        # exposure_vec[:death_zone] = 1
+        exposure_vec[:] = 0
         exposure_vec_2 = np.concatenate((exposure_vec, exposure_vec))
         self.default_observer.write_message(5, f"Exposure raster prepared.")
         
@@ -439,24 +443,24 @@ class Bembidion(base.Component):
         self.default_observer.write_message(5, f"Simulation finished.")
         
         # create last density map for plotting
-        density_map = self.create_density_map()
+        # density_map = self.create_density_map()
         
         # Display the raster using matplotlib
-        plt.figure(figsize=(10, 8))
-        plt.title("Visualization")
-        plt.imshow(lulc_band, cmap="gray")
-        #plt.imshow(density_map, cmap='hot', alpha=1)  # density map overlay
-        plt.colorbar(label="LULC value")
-        #plt.colorbar(label="# Individuals")
-        plt.xlabel("X Coordinate")
-        plt.ylabel("Y Coordinate")
+        # plt.figure(figsize=(10, 8))
+        # plt.title("Visualization")
+        # plt.imshow(lulc_band, cmap="gray")
+        # plt.imshow(density_map, cmap='hot', alpha=1)  # density map overlay
+        # # plt.colorbar(label="LULC value")
+        # plt.colorbar(label="# Individuals")
+        # plt.xlabel("X Coordinate")
+        # plt.ylabel("Y Coordinate")
         
-        for bembid in self.Bembidions[:]:
-            plt.plot(bembid.x_trace, bembid.y_trace, color='red', linewidth=2, label='Walking Route')
-        
-        #plt.savefig('D:/_Git_/24019_BAY_Bembidion/Test/bembid/analysis/output_plot.png')
-        
-        self.default_observer.write_message(5, f"Output plot created.")
+        # for bembid in self.Bembidions[:100]:
+        #     plt.plot(bembid.x_trace, bembid.y_trace, color='red', linewidth=2, label='Walking Route')
+        #
+        # plt.savefig('F:/test.png')
+        #
+        # self.default_observer.write_message(5, f"Output plot created.")
         
         # set outputs:
         self.outputs["NumberBembids"].set_values(self.BembidionCount)
